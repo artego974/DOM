@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <button id="contar">Contar Cliques</button>
+    <button id="resetar">Resetar</button>
+    <h1>Total de click </h1>
+    <p id="contador">0</p>
+</body>
+<script>
+    const buttonContar = document.querySelector("#contar")
+    const buttonResetar = document.querySelector("#resetar")
+    const textoContador = document.querySelector("#contador")
+
+
+    let contagemAtual = 0
+
+    buttonContar.addEventListener("click", acrescentarContagem)
+    buttonResetar.addEventListener("click", resetarContagem)
+
+    function acrescentarContagem(){
+        contagemAtual +=  1
+        textoContador.innerText = contagemAtual
+    }
+    function resetarContagem(){
+        contagemAtual = 0
+        textoContador.innerText = contagemAtual
+    }
+</script>
+</html>

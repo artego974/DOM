@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<style>
+    .quadrado{
+        width: 100px;
+        height: 100px;
+        display: block;
+        text-align: center;
+    }
+    #quadrado1{
+        background-color: red;
+    }
+    #quadrado2{
+        background-color: green;
+    }
+    #quadrado3{
+        background-color: blue;
+    }
+</style>
+<body>
+    <div class="quadrado" id="quadrado1">quadrado1</div>
+    <div class="quadrado" id="quadrado2">quadrado2</div>
+    <div class="quadrado" id="quadrado3">quadrado3</div>
+</body>
+<script>
+    const quadrado1 = document.getElementById('quadrado1')
+    const quadrado2 = document.getElementById('quadrado2')
+    const quadrado3 = document.getElementById('quadrado3')
+
+    quadrado1.addEventListener("click", ()=>{
+        quadrado1.style.backgroundColor == 'red' ? quadrado1.style.backgroundColor = 'green' : quadrado1.style.backgroundColor = 'red'
+    })
+
+    quadrado2.addEventListener("click", ()=>{
+        quadrado2.style.backgroundColor == 'green' ? quadrado2.style.backgroundColor = 'blue' : quadrado2.style.backgroundColor = 'green'
+    })
+
+    quadrado3.addEventListener("click", ()=>{
+        quadrado3.style.backgroundColor == 'blue' ? quadrado3.style.backgroundColor = 'red' : quadrado3.style.backgroundColor = 'blue'
+    })
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pressionar Tecla</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #mensagem {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mensagem">Pressione uma tecla</div>
+
+    <script>
+        let mensagem = document.getElementById("mensagem")
+
+        document.addEventListener('keydown', mudarTecla) 
+
+        function mudarTecla(){
+            let teclaPressionada = event.key;
+            mensagem.innerText = 'Você pressionou: ' + teclaPressionada;
+        };
+
+    </script>
+
+</body>
+</html>

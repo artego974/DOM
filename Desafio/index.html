@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Item</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #lista {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Itens</h1>
+    <button id="adicionar">Adicionar Item</button>
+    <ul id="lista"></ul>
+
+    <script>
+        let add = document.getElementById('adicionar')
+        let lista = document.getElementById("lista")
+
+        add.addEventListener('click', adicionarItemNaLista)
+
+
+        function adicionarItemNaLista() {
+            const novoItem = prompt("Digite o item que deseja adicionar à lista:");
+            if (novoItem) {
+                const item = document.createElement('li');
+                item.textContent = novoItem;
+                lista.appendChild(item);
+            } else {
+                alert("Você não digitou nenhum item.");
+            }
+        };
+    </script>
+
+</body>
+</html>
